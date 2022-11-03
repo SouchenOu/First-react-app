@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 class  Counter extends Component {
     state = {
         count : 1,
+        value: this.props.value,
         tags : ['tag1', 'tag2', 'tag3']
     };
+    handleIncrement = () => {
+        this.setState({ value: this.state.value + 1});
+    }
     /*styles = {
         fontSize: 10,
         fontWeight: "bold"
@@ -34,9 +38,9 @@ class  Counter extends Component {
         const { count } = this.state;
         return count === 0 ? 'Zero' : count;
      }
-     handleIncrement(){
+     /*handleIncrement(){
         console.log('Increment clicked');
-     }
+     }*/
 }
  
 export default Counter;
